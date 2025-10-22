@@ -2,8 +2,8 @@
 
 namespace App\Filament\Resources\Notes\Schemas;
 
+use Filament\Forms\Components\MarkdownEditor;
 use Filament\Forms\Components\TextInput;
-use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\Toggle;
 use Filament\Schemas\Schema;
 
@@ -15,7 +15,7 @@ class NoteForm
             ->components([
                 TextInput::make('title')
                     ->required(),
-                Textarea::make('content')
+                MarkdownEditor::make('content')
                     ->columnSpanFull(),
                 Toggle::make('active')
                     ->required(),
