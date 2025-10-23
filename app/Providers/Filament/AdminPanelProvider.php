@@ -29,6 +29,11 @@ class AdminPanelProvider extends PanelProvider
             ->path('admin')
             ->login()
             ->registration()
+            ->passwordReset()
+            ->emailChangeVerification()
+            ->emailVerification()
+            
+            ->brandName('Armans Notebook')
             ->colors([
                 'primary' => Color::Amber,
             ])
